@@ -34,139 +34,159 @@
         </LinearLayout>
     </android.support.v7.widget.Toolbar>
 
-    <RelativeLayout
-        android:id="@+id/lang_panel"
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:clipToPadding="false"
-        android:elevation="1dp"
-        android:gravity="center"
-        android:outlineProvider="bounds">
-
-        <android.support.v7.widget.AppCompatSpinner
-            android:id="@+id/source_lang"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:gravity="center" />
-
-        <android.support.v7.widget.AppCompatImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:background="@android:color/transparent"
-            app:srcCompat="@drawable/switch_lang" />
-
-        <android.support.v7.widget.AppCompatSpinner
-            android:id="@+id/dest_lang"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:gravity="center" />
-    </RelativeLayout>
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/original"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <android.support.v7.widget.AppCompatEditText
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:background="@android:color/transparent"
-                android:gravity="top"
-                android:hint="@string/translater_hint"
-                android:padding="5dp"
-                android:textColor="@android:color/black" />
-
             <RelativeLayout
+                android:id="@+id/lang_panel"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal">
+                android:layout_height="35dp"
+                android:clipToPadding="false"
+                android:elevation="1dp"
+                android:gravity="center"
+                android:outlineProvider="bounds">
 
-                <android.support.v7.widget.AppCompatImageButton
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/source_lang"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
-                    android:layout_centerVertical="true"
-                    android:background="@android:color/white"
-                    android:padding="20dp"
-                    app:srcCompat="@drawable/camera" />
+                    android:gravity="center" />
 
                 <android.support.v7.widget.AppCompatImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:layout_centerVertical="true"
-                    android:background="@android:color/white"
-                    android:padding="20dp"
-                    app:srcCompat="@drawable/microphone" />
+                    android:layout_centerHorizontal="true"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/switch_lang" />
 
-                <android.support.v7.widget.AppCompatImageButton
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/dest_lang"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:background="@android:color/white"
-                    android:padding="20dp"
-                    app:srcCompat="@drawable/curve" />
-
-
+                    android:gravity="center" />
             </RelativeLayout>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/original"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="top"
+                        android:hint="@string/translater_hint"
+                        android:padding="5dp"
+                        android:textColor="@android:color/black" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/white"
+                            android:padding="20dp"
+                            app:srcCompat="@drawable/camera" />
+
+                        <android.support.v7.widget.AppCompatImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/white"
+                            android:padding="20dp"
+                            app:srcCompat="@drawable/microphone" />
+
+                        <android.support.v7.widget.AppCompatImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/white"
+                            android:padding="20dp"
+                            app:srcCompat="@drawable/curve" />
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/translated"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="top"
+                        android:hint="@string/translater_hint"
+                        android:padding="5dp"
+                        android:textColor="@android:color/black" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatImageButton
+                            android:id="@+id/content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/white"
+                            android:padding="20dp"
+                            app:srcCompat="@drawable/content" />
+
+                        <android.support.v7.widget.AppCompatImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@id/content"
+                            android:background="@android:color/white"
+                            android:padding="20dp"
+                            app:srcCompat="@drawable/frame" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
         </LinearLayout>
-    </android.support.v7.widget.CardView>
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/translated"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <android.support.design.widget.NavigationView
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_gravity="start"
+            app:menu="@menu/menu"
+            app:headerLayout="@layout/h_header" />
 
-            <android.support.v7.widget.AppCompatEditText
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:background="@android:color/transparent"
-                android:gravity="top"
-                android:hint="@string/translater_hint"
-                android:padding="5dp"
-                android:textColor="@android:color/black" />
+    </android.support.v4.widget.DrawerLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal">
-
-                <android.support.v7.widget.AppCompatImageButton
-                    android:id="@+id/content"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:background="@android:color/white"
-                    android:padding="20dp"
-                    app:srcCompat="@drawable/content" />
-
-                <android.support.v7.widget.AppCompatImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_toLeftOf="@id/content"
-                    android:background="@android:color/white"
-                    android:padding="20dp"
-                    app:srcCompat="@drawable/frame" />
-
-            </RelativeLayout>
-        </LinearLayout>
-
-    </android.support.v7.widget.CardView>
 </LinearLayout>
